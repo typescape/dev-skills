@@ -51,7 +51,10 @@ Iterate until the user approves the breakdown.
 
 ### 5. Create the GitHub issues
 
-For each approved slice, create a GitHub issue using `gh issue create`. Use the issue body template below and add the "agent-task" label to all issues.
+For each approved slice, create a GitHub issue using `gh issue create`. Use the issue body template below and add the following labels to all issues:
+
+- `agent-task` — general filtering label for agent-specific tasks
+- `parent-prd-<prd-issue-number>` — allows grouping issues based on parent PRD (e.g., `parent-prd-42` if the PRD is issue #42)
 
 Create issues in dependency order (blockers first) so you can reference real issue numbers in the "Blocked by" field.
 
